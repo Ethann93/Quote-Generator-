@@ -42,12 +42,10 @@ This is a simple web application that generates random quotes and allows users t
 ![scrrenshot](https://github.com/Ethann93/Quote-Generator-/assets/133777296/9394be79-6f07-447e-9576-cc0c4b0cb8bf)
 
 
-## How to Run Locally
+## How to access 
 
-To run this project locally, follow these steps:
+You can access my webpage through the following link: https://en-quote-generator.netlify.app/
 
-1. Clone this repository to your local machine.
-2. Open the `index.html` file in your web browser.
 
 ## Credits
 
