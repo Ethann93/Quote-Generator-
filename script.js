@@ -12,21 +12,19 @@ const loader = document.getElementById(`loader`);
 
 let apiQuotes = [];
 
-//LOADING FUNCTION TO SHOW LOADING
-function loading() {
+function showLoadingSpinner() {
   loader.hidden = false;
   quoteContainer.hidden = true;
 }
 
-//HIDE LOADING
-function complete() {
+function removeLoadingSpinner() {
   quoteContainer.hidden = false;
   loader.hidden = true;
 }
 
 //SHOW NEW QUOTE
 function newQuote() {
-  loading();
+  showLoadingSpinner();
   // PICK A RANDOM QUOTE FROM apiQUotes ARRAY
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
   // CHECK IF AUTHOR FIELD IS BLANK AND REPLACE IT WITH `UNKNOWN`
@@ -43,12 +41,12 @@ function newQuote() {
   }
   //SET THE QUOTE AND HIDE LOADER
   quoteText.textContent = quote.text;
-  complete();
+  removeLoadingSpinner();
 }
 
 // GET QUOTES FROM API
 async function getQuotes() {
-  loading();
+  showLoadingSpinner();
   const apiUrl = `https://jacintodesign.github.io/quotes-api/data/quotes.json`;
   try {
     const response = await fetch(apiUrl);
